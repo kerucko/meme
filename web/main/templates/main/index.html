@@ -1,0 +1,94 @@
+{% load static %}
+<!Doctype html>
+<html>
+<head>
+    <meta charaset="utf-8">
+    <title>Memematch</title>
+    <link rel="shortcut icon" href="{% static 'main/img/m.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    .colortext {
+        color: #FD496C;
+        font-size: 96px;
+        }
+    .name1 {
+        font-size: 2px;
+        color: #fff;
+        margin-top: -30px;
+        padding-top: 20px;
+        visibility: hidden;
+        }
+    .name2 {
+        visibility: hidden;
+        font-size: 5px;
+        }
+    a {
+    text-decoration: none;
+        }
+    html {
+    scroll-behavior: smooth;
+    </style>
+</head>
+<body>
+ <div class="main">
+    <div class="intro">
+        <div class="container"> 
+            <p><span class="colortext">M</span>emematch</p>
+        </div> 
+        <p>Если Вы уже прошли кучу различных тестов на совместимость по знакам зодиака, гороскопам и натальным картам, то этот сайт - находка для Вас!</p>
+    </div>
+    <div class="cat_and_button">
+    <div class="cat1">
+        <img src="{% static 'main/img/cat_on_button.png' %}" alt="Кошка из трёшки" width=200px> </div>
+    <div><button class="button">
+        <a style="color: #FFFFFF" href="#howdoesitwork"> Как это работает? </a>
+    </button>
+        <button class="button">
+            <a style="color: #FFFFFF" href={% url 'quantity' %}> Пройти тест </a>
+        </button>
+    </div>
+    <div class="secondpage">
+        <div class="secondtitle">
+            <div class="name1">
+                <a id="howdoesitwork">meow</a>
+        </div>
+            <p>Как это работает?</p>
+        </div> 
+        <p>Этот проект создан для того, чтобы Вы вместе со своими друзьями или вторыми половинками могли проверить вашу совместимость по мемам. </p>
+    </div>
+    <div class="steptext">
+        <div class="step1">ШАГ 1.</div>
+        <div>Выберите количество мемов, которые Вы бы хотели просмотреть. Чем больше мемов вы просмотрите, тем точнее будет результат</div>
+    </div>
+    <div class="steptext2">
+        <div class="step2">ШАГ 2.</div>
+        <div>Каждый мем оцените по шкале от -3 до 3</div>
+    </div>
+    <div class="steptext3">
+        <div class="step3">ШАГ 3.</div>
+        <div>Отправьте сгененированный код Вашему другу и подождите, пока он проходит тест</div>
+    </div>
+      <div class="thirdpage">
+        <div class="secondtitle">
+            <div class="name2">
+            <p>meow</p>
+                </div>
+            <p>Пройти тест</p>
+        </div> 
+        <p>Если совместимость &gt60%, то мы вас поздравляем - вы общаетесь с таким же бакланом, как и вы!</p>
+        <p>Если совместимость &lt40%, то мы искренне сочувствуем вам и советуем прекратить общение с этим человеком :(</p>
+    </div>
+    <div class="cat_and_button">
+    <div class="cat2"><img src="{% static 'main/img/cat2.png' %}" alt="Кошка из трёшки" width=200px> </div>
+    <div><button class="button2">
+        <a style="color: #FFFFFF" href={% url 'quantity' %}> Начать </a>
+    </button>
+    </div>
+    </div>
+</div>
+</body>
+</html>

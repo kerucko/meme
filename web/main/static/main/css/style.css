@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.cat1 {
+    padding-left: 27%;
+    margin-bottom: -32px;
+    position: relative;
+    z-index: 10px;
+}
+
+.cat_and_button {
+    position: relative;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    font-size: 65px;
+    margin-bottom: -50px;
+}
+
+.intro {
+    padding: 0px;
+    max-width: 1200px;
+    font-weight: 600;
+    margin-left: 8%;
+} 
+
+.secondpage {
+    padding: 0px;
+    width: 75%;
+    max-width: 1200px;
+    font-weight: 500;
+    margin-top: 130px;
+    margin-left: 8%;
+    margin-bottom: 40px;
+} 
+
+.secondtitle{
+    font-size: 50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    padding-top: 0.5px;
+    margin-bottom: -22px;
+}
+
+.button {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #FD496C;
+    font-size: 30px;
+    border-radius: 50px;
+    box-shadow: 4px 4px 15px #151515;
+    border: none;
+    width: 350px;
+    height: 80px;
+    cursor: pointer;
+    transition: 0.35s;
+    margin-left: 23.5%;
+    margin-right: -200px;
+}
+
+
+.button:hover {
+    background-color: #ED8965;
+}
+
+.step1 {
+    font-size: 40px;
+    color: #FD496C;
+    font-weight: 600;
+    width: 15%;
+    display: inline-block;
+    float: left;
+}
+
+.step2 {
+    font-size: 40px;
+    color: #FD496C;
+    font-weight: 600;
+    width: 15%;
+    display: inline-block;
+    float: left;
+    margin-top: -17px;
+}
+
+.step3 {
+    font-size: 40px;
+    color: #FD496C;
+    font-weight: 600;
+    width: 15%;
+    display: inline-block;
+    float: left;
+    margin-top: -5px;
+    margin-bottom: 100px;
+}
+
+.steptext {
+    padding: 0px;
+    width: 100%;
+    max-width: 1200px;
+    font-weight: 500;
+    margin-left: 8%;
+    margin-bottom: 10px;
+} 
+
+.steptext2 {
+    padding: 0px;
+    width: 100%;
+    max-width: 1200px;
+    font-weight: 500;
+    margin-left: 8%;
+    margin-bottom: 20px;
+} 
+
+.steptext3 {
+    padding: 0px;
+    width: 100%;
+    max-width: 1200px;
+    font-weight: 500;
+    margin-left: 8%;
+    margin-bottom: 20px;
+} 
+
+.thirdpage {
+    padding: 0px;
+    width: 75%;
+    max-width: 1200px;
+    font-weight: 500;
+    margin-top: 130px;
+    margin-left: 8%;
+    margin-bottom: 30px; 
+}
+
+.cat2 {
+    padding-left: 45.5%;
+    margin-bottom: -35px;
+    position: relative;
+    z-index: 10px;
+}
+
+.button2 {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    background-color: #FD496C;
+    font-size: 30px;
+    border-radius: 50px;
+    box-shadow: 4px 4px 15px #151515;
+    border: none;
+    width: 280px;
+    height: 70px;
+    cursor: pointer;
+    transition: 0.35s;
+    margin-left: 43%;
+    margin-bottom: 60px;
+}
+
+.button2:hover {
+    background-color: #ED8965;
+}
+
+.wrapper
+{
+	width: 100%;
+}
+
+.quiz-frame
+{
+	border: 0;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	margin: 20px;
+}
+
+html {
+  background-image: url("../img/frame.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
+}
+

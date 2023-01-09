@@ -1,0 +1,58 @@
+{% load static %}
+<!Doctype html>
+<html>
+<head>
+    <meta charaset="utf-8">
+    <title>Memematch</title>
+    <link rel="shortcut icon" href="{% static 'main/img/m.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="true"/>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <style>
+        html {
+        background-image: {% static 'main/img/frame3.png' %}
+        }
+        .button {
+        width: 81px;
+        height: 81px;
+        box-shadow: 2px 0 0 #FFFFFF, 0 2px 0 #FFFFFF, -2px 0 0 #FFFFFF, 0 -2px 0 #FFFFFF;
+        border-radius: 100px;
+        font-size: 40px;
+        margin-left: 10.5%;
+        margin-right: -55px;
+        }
+        .intro {
+            margin-top: 5%;
+            margin-bottom: 28%;
+            margin-left: 20%;
+            margin-right: 20%;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+ <div class="main">   
+    <div class="intro">
+        <p><center>Оцените мем</center></p>
+    </div>
+    <div class="wrapper">
+        <iframe src="quiz.html" width="480" height="720" class="quiz-frame" X-Frame-Options: ALLOW></iframe>
+    </div>
+    <div><button class="button">-3</button>
+    <button class="button">-2</button>
+    <button class="button">-1</button>
+    <button class="button">0</button>
+    <button class="button">1</button>
+    <button class="button">2</button>
+    <button class="button">3</button>
+    </div>
+</div>
+</body>
+</html>
