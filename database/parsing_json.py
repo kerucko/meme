@@ -1,9 +1,9 @@
 import json
 import codecs
 
-path_to_json = "database/result.json"
+path_to_json = "result.json"
 
-path_to_new_json = "database/pars.json"
+path_to_new_json = "pars.json"
 
 with codecs.open(path_to_json, "r", "utf_8_sig") as read_file:
     dictdata = json.load(read_file)
