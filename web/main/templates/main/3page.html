@@ -41,10 +41,11 @@
  <div class="main">   
     <div class="intro">
         <p><center>Оцените мем</center></p>
+    <div>
+	<img src="" id="image"/>
+	<div><input type="button" value="Show random image" id="button"/></div>
     </div>
-    <div class="wrapper">
-        <iframe src="quiz.html" width="480" height="720" class="quiz-frame" X-Frame-Options: ALLOW></iframe>
-    </div>
+    <script type="text/javascript" src="{% static 'main/js/quiz.js' %}"></script>
     <div><button class="button">-3</button>
     <button class="button">-2</button>
     <button class="button">-1</button>
