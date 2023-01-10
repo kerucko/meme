@@ -39,5 +39,5 @@ id_pictures = function(){
 return randomInteger(5, 2739);
 }
 
-document.getElementById("imaaaga").innerHTML = '<img src="img/'+id_pictures()+'.jpg" border="0" />';
+document.getElementById("imaaaga").innerHTML = '<img src="photo_'+id_pictures()+'.jpg" border="0" />';
 
