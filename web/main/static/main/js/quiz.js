@@ -1,8 +1,8 @@
-var imgs=[
-		'http://www.icenews.is/wp-content/uploads/2015/02/animals-1-700x700.jpg',
-		'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShZghyt2L03zlqdj_6F7EPbCCsWWnAcVsvJ3_xv7cc-IraZc-o',
-		'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdPEJ0n_tXI0No_5AgkeVpzomxp4mI8jlQv3rsKQQHNh671QU_'
-	],
+//var imgs=[
+//		'http://www.icenews.is/wp-content/uploads/2015/02/animals-1-700x700.jpg',
+//		'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShZghyt2L03zlqdj_6F7EPbCCsWWnAcVsvJ3_xv7cc-IraZc-o',
+//		'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdPEJ0n_tXI0No_5AgkeVpzomxp4mI8jlQv3rsKQQHNh671QU_'
+//	],
 	image=document.getElementById('image'),
 	button_3=document.getElementById('button_3');
 	button_2=document.getElementById('button_2');
@@ -13,30 +13,30 @@ var imgs=[
 	button3=document.getElementById('button3');
 
 button_3.onclick=function(){
-image.src=imgs[Math.floor(Math.random()*imgs.length)];
+id_pictures()=randomInteger(1, 5);
 }
 button_2.onclick=function(){
-image.src=imgs[Math.floor(Math.random()*imgs.length)];
+id_pictures()=randomInteger(1, 5);
 }
 button_1.onclick=function(){
-image.src=imgs[Math.floor(Math.random()*imgs.length)];
+id_pictures()=randomInteger(1, 5);
 }
 button0.onclick=function(){
-image.src=imgs[Math.floor(Math.random()*imgs.length)];
+id_pictures()=randomInteger(1, 5);
 }
 button1.onclick=function(){
-image.src=imgs[Math.floor(Math.random()*imgs.length)];
+id_pictures()=randomInteger(1, 5);
 }
 button2.onclick=function(){
-image.src=imgs[Math.floor(Math.random()*imgs.length)];
+id_pictures()=randomInteger(1, 5);
 }
 button3.onclick=function(){
-image.src=imgs[Math.floor(Math.random()*imgs.length)];
+id_pictures()=randomInteger(1, 5);
 }
 
 
 id_pictures = function(){
-return randomInteger(5, 2739);
+return randomInteger(1, 5);
 }
 
 document.getElementById("imaaaga").innerHTML = '<img src="photo_'+id_pictures()+'.jpg" border="0" />';
