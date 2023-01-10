@@ -38,8 +38,10 @@
         }
     </style>
 </head>
-<body>
- <div class="main">   
+<body onload="OnLoad()">
+<!--<font id="Count">-->
+<!--    </font>-->
+ <div class="main">
     <div class="intro">
         <p><center>Оцените мем</center></p>
     </div>
@@ -53,8 +55,14 @@
         <input class="button" type="button" value="2" id="button2"/>
         <input class="button" type="button" value="3" id="button3"/>
     </div>
-    <script type="text/javascript" src="{% static 'main/js/quiz.js' %}"></script>
     </div>
+    <script type="text/javascript" src="{% static 'main/js/quiz.js' %}"></script>
+    <script language="javascript" type="text/javascript">
+        function OnLoad() {
+        var paramValue = window.location.href.split("?")[1].split("=")[1];
+        document.getElementById("Count").innerHTML = paramValue;
+        }
+    </script>
 </div>
 </body>
 </html>
