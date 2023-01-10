@@ -10,3 +10,10 @@ button.onclick=function(){
 image.src=imgs[Math.floor(Math.random()*imgs.length)];
 }
 
+
+id_pictures = function(){
+return randomInteger(5, 2739);
+}
+
+document.getElementById("imaaaga").innerHTML = '<img src="img/'+id_pictures()+'.jpg" border="0" />';
+
