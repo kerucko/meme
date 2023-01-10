@@ -7,18 +7,35 @@
 	button2 = document.getElementById('button2');
 	button3 = document.getElementById('button3');
 
-count_click=10;
+
+var count_click = 0;
+var id = "Count";
+var max = document.getElementById(id);
+alert(max);
 
 button_3.onclick = function(){
-id_pictures = Math.floor(Math.random() * 2631 + 1);
-image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
-//if (count_click < 10) {
-//count_click = count_click + 1}
-//else //переход на следующую страницу
+    if (count_click <= 5) {
+        image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
+        count_click = count_click + 1;
+        id_pictures = Math.floor(Math.random() * 2631 + 1);
+    }
+    else {
+        alert("meow");
+        //переход на другую страницу
+        //выход из программы
+    }
 }
 button_2.onclick = function(){
-id_pictures = Math.floor(Math.random() * 2631 + 1);
-image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
+    if (count_click <= 5) {
+        image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
+        count_click = count_click + 1;
+        id_pictures = Math.floor(Math.random() * 2631 + 1);
+    }
+    else {
+        alert("meow");
+        //переход на другую страницу
+        //выход из программы
+    }
 }
 button_1.onclick = function(){
 id_pictures = Math.floor(Math.random() * 2631 + 1);
