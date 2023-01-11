@@ -17,10 +17,10 @@ function getUrlParameter(sParam) {
 
 function nextMeme() {
     if (count_click < max) {
+        id_pictures = Math.floor(Math.random() * 2631 + 1);
         image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
         count_click = count_click + 1;
         count.innerText = count_click + '/' + max;
-        id_pictures = Math.floor(Math.random() * 2631 + 1);
     }
     else {
         alert("meow");
@@ -42,7 +42,6 @@ count = document.getElementById('Count');
 
 var count_click = 1;
 var max = getUrlParameter('count_click');
-alert(max);
 
 count.innerText = count_click + '/' + max;
 
