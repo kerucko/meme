@@ -15,21 +15,22 @@
             font-size: 65px;
             line-height: 15px;
             margin-right: 80px;
+            margin-top: 5%;
         }
         .procent {
             font-size: 270px;
             top: 500px;
-            margin-left: 60%;
-            margin-top: -33%;
+            margin-left: 58%;
+            margin-top: -32%;
+            text-shadow: #E1EDEB 0 0 10px;
         }
         html {
               background-image: {% static 'main/img/backg.png' %};
-              overflow-y:  hidden;
+              overflow:  hidden;
         }
         .textm {
             font-size: 35px;
-            margin-top: -13%;
-            font-weight: 600;
+            margin-top: -18%;
             margin-left: 8%;
             margin-right: 20%;
             line-height: 15px;
@@ -41,40 +42,54 @@
             margin-right: 20%;
         }
         .button {
-            margin-left: 0;
-            margin-right: 0;
-            position:relative;
-            left: 1100px;
-            top: -200px;
-            font-weight: 500;
-            width: 370px;
+            margin-left: 35%;
+            font-size: 25px;
+            font-weight: 350;
+            width: 350px;
+            margin-top: -40%;
             font-family: 'Montserrat', sans-serif;
         }
-        .kosh {
-            padding-left: 780px;
-            margin-top: -190px;
+        .cat_and_button {
+            position: relative;
         }
+        .cat1 {
+            left: 18%;
+            padding-top: 1%;
+            margin-bottom: -4%;
+            z-index: 10px;
+        }
+
         a {
             text-decoration: none;
         }
     </style>
-</head>
 
+</head>
 <body>
-     <div class="main">
-        <div class="intro">
-                <p>Ну...</p>
-                <p>Ваш результат:</p>
-        </div>
-        <div class="procent"><p><b>50%</b></p></div>
-        <div class="textm"><p>В принципе, Вы общаетесь не с самым</p> <p>кринжовым человеком. Ура!</p></div>
-        <button class="button">
-            <a style="color: #FFFFFF" href={% url 'quantity' %}> Пройти тест заново </a>
-        </button>
-        <div class="textm2"><p>Спасибо, что прошли наш тест. Пока!</p></div>
-        <div class="kosh">
-        <p><img src="{% static 'main/img/кош.png' %}" alt="Кошка из трёшки" width=150></p>
-        </div>
+ <div class="main">   
+    <div class="intro">
+            <p>Ну...</p>
+            <p>Ваш результат:</p>
     </div>
+    <div class="procent">
+        <p><b>50%</b></p>
+     </div>
+     <div class="textm">
+         <p>В принципе, Вы общаетесь не с самым</p> <p>кринжовым человеком. Ура!</p>
+     </div>
+<!--    <div class="textm2">-->
+<!--     <p>Спасибо, что прошли наш тест. Пока!</p>-->
+<!--     </div>-->
+     <div class="cat_and_button">
+     <div class="cat1">
+        <p><img src="{% static 'main/img/meowmeow.png' %}" alt="Кошка из трёшки" width=200></p>
+     </div>
+         <div>
+    <button class="button">
+        <a style="color: #FFFFFF" href={% url 'quantity' %}> Пройти тест заново </a>
+    </button>
+         </div>
+</div>
+</div>
 </body>
 </html>
