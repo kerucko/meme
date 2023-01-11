@@ -17,48 +17,54 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <style>
         html {
-        background-image: {% static 'main/img/frame3.png' %}
-        }
+            background-image: {% static 'main/img/frame3.png' %}
+            }
         .button {
-        width: 81px;
-        height: 81px;
-        box-shadow: 2px 0 0 #FFFFFF, 0 2px 0 #FFFFFF, -2px 0 0 #FFFFFF, 0 -2px 0 #FFFFFF;
-        border-radius: 100px;
-        font-size: 40px;
-        margin-left: 10.5%;
-        margin-right: -55px;
+            width: 81px;
+            height: 81px;
+            box-shadow: 2px 0 0 #FFFFFF, 0 2px 0 #FFFFFF, -2px 0 0 #FFFFFF, 0 -2px 0 #FFFFFF;
+            border-radius: 100px;
+            font-size: 40px;
+            margin-left: 10.2%;
+            margin-right: -55px;
         }
         .intro {
             margin-left: 20%;
             margin-right: 20%;
+            margin-top: -7%;
+            margin-bottom: -1.5%;
             font-size: 50px;
         }
         .meme{
             text-align: center;
         }
+        .counter {
+            margin-top: 3%;
+            margin-right: 5%;
+            text-align: right;
+            font-size: 35px;
+        }
     </style>
 </head>
-<body onload="OnLoad()">
 
-<!--<font id="Count">-->
-<!--    </font>-->
-<div id="Count"></div>
- <div class="main">
-    <div class="intro">
-        <p><center>Оцените мем</center></p>
+<body onload="OnLoad()">
+    <div class="main">
+        <div class="counter" id="Count"></div>
+        <div class="intro">
+            <p><center>Оцените мем</center></p>
+        </div>
+        <div>
+            <p class="meme"><img src="static/main/img/photos/photo_219.jpg" alt="mem" height=430px id="image"/></p>
+            <div><input class="button" type="button" value="-3" id="button_3"/>
+                <input class="button" type="button" value="-2" id="button_2"/>
+                <input class="button" type="button" value="-1" id="button_1"/>
+                <input class="button" type="button" value="0" id="button0"/>
+                <input class="button" type="button" value="1" id="button1"/>
+                <input class="button" type="button" value="2" id="button2"/>
+                <input class="button" type="button" value="3" id="button3"/>
+            </div>
+        </div>
+        <script type="text/javascript" src="{% static 'main/js/quiz.js' %}"></script>
     </div>
-    <div>
-    <p class="meme"><img src="static/main/img/photos/photo_219.jpg" alt="mem" height=400px id="image"/></p>
-    <div><input class="button" type="button" value="-3" id="button_3"/>
-        <input class="button" type="button" value="-2" id="button_2"/>
-        <input class="button" type="button" value="-1" id="button_1"/>
-        <input class="button" type="button" value="0" id="button0"/>
-        <input class="button" type="button" value="1" id="button1"/>
-        <input class="button" type="button" value="2" id="button2"/>
-        <input class="button" type="button" value="3" id="button3"/>
-    </div>
-    </div>
-    <script type="text/javascript" src="{% static 'main/js/quiz.js' %}"></script>
-</div>
 </body>
 </html>

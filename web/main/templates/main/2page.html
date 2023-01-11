@@ -32,35 +32,32 @@
         background-image: {% static 'main/img/frame2.png' %};
     }
     a {
-    text-decoration: none;
+        text-decoration: none;
         }
     </style>
 </head>
+
 <body>
- <div class="main">   
-    <div class="intro">
-        <p><center>Выберите, сколько мемов Вы хотели бы просмотреть:</center></p>
+    <div class="main">
+        <div class="intro">
+            <p><center>Выберите, сколько мемов Вы хотели бы просмотреть:</center></p>
+        </div>
+        <form>
+            <input class="button" type ="button" value="15" onclick="goClick15()" />
+            <input class="button" type ="button" value="30" onclick="goClick30()" />
+            <input class="button" type ="button" value="60" onclick="goClick60()" />
+        </form>
     </div>
-     <form>
-    <input class="button" type ="button" value="15" onclick="goClick15()" />
-    <input class="button" type ="button" value="30" onclick="goClick30()" />
-     <input class="button" type ="button" value="60" onclick="goClick60()" />
-    </form>
-    </div>
-<script language="javascript" type="text/javascript">
+    <script language="javascript" type="text/javascript">
     function goClick15() {
         document.location = "http://127.0.0.1:8000/point?count_click=15";
     }
-</script>
-<script language="javascript" type="text/javascript">
     function goClick30() {
         document.location = "http://127.0.0.1:8000/point?count_click=30";
     }
-</script>
-<script language="javascript" type="text/javascript">
     function goClick60() {
         document.location = "http://127.0.0.1:8000/point?count_click=60";
     }
-</script>
+    </script>
 </body>
 </html>

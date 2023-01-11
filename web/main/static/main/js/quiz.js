@@ -6,7 +6,6 @@ function getUrlParameter(sParam) {
 
     for (i = 0; i < sURLVariables.length; i++) {
         sParameterName = sURLVariables[i].split('=');
-
         if (sParameterName[0] === sParam) {
             return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
         }
@@ -29,7 +28,6 @@ function nextMeme() {
     }
 }
 
-
 image = document.getElementById('image'),
 button_3 = document.getElementById('button_3');
 button_2 = document.getElementById('button_2');
@@ -42,7 +40,6 @@ count = document.getElementById('Count');
 
 var count_click = 1;
 var max = getUrlParameter('count_click');
-alert(max);
 
 count.innerText = count_click + '/' + max;
 
