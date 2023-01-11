@@ -63,7 +63,6 @@ button2.onclick = function(){
     nextMeme();
 }
 button3.onclick = function(){
-    id_pictures = Math.floor(Math.random() * 2631 + 1);
-    image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
+    nextMeme();
 }
 
