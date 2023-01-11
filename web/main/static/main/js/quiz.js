@@ -22,9 +22,8 @@ function nextMeme() {
         count.innerText = count_click + '/' + max;
     }
     else {
-        alert("meow");
-        //переход на другую страницу
-        //выход из программы
+        document.location = "http://127.0.0.1:8000/share";
+        link.innerHTML = 'meow' + count_click;
     }
 }
 
@@ -37,6 +36,8 @@ button1 = document.getElementById('button1');
 button2 = document.getElementById('button2');
 button3 = document.getElementById('button3');
 count = document.getElementById('Count');
+link = document.getElementById('Link');
+button_copy = document.getElementById('Copy_link');
 
 var count_click = 1;
 var max = getUrlParameter('count_click');
@@ -64,5 +65,9 @@ button2.onclick = function(){
 }
 button3.onclick = function(){
     nextMeme();
+}
+
+button_copy.onclick = function() {
+  // скопировать ссылку
 }
 
