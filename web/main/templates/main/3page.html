@@ -18,7 +18,8 @@
     <style>
         html {
             background-image: {% static 'main/img/frame3.png' %}
-            }
+            overflow: hidden;
+        }
         .button {
             width: 81px;
             height: 81px;
@@ -55,7 +56,8 @@
         </div>
         <div>
             <p class="meme"><img src="static/main/img/photos/photo_219.jpg" alt="mem" height=430px id="image"/></p>
-            <div><input class="button" type="button" value="-3" id="button_3"/>
+            <div class="buttons">
+                <input class="button" type="button" value="-3" id="button_3"/>
                 <input class="button" type="button" value="-2" id="button_2"/>
                 <input class="button" type="button" value="-1" id="button_1"/>
                 <input class="button" type="button" value="0" id="button0"/>
