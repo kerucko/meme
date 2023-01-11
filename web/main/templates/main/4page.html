@@ -11,20 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+    html { overflow-y:  hidden; }
     .intro {
         width: 100%;
         margin-top: 5%;
         font-size: 50px;
         margin-bottom: 3%;
+        margin-left: 12%;
         }
     .button {
         width: 277px;
-        height: 37px;
+        height: 40px;
         box-shadow: 2px 0 0 #FFFFFF, 0 2px 0 #FFFFFF, -2px 0 0 #FFFFFF, 0 -2px 0 #FFFFFF;
         border-radius: 100px;
         font-size: 20px;
         margin-right: -200px;
-        margin-left: 11%;
+        margin-left: 10%;
+        margin-top: 2%;
         }
     .page {
         font-family: 'Montserrat', sans-serif;
@@ -38,19 +41,24 @@
         display: inline-block;
         color: #000000;
         background-color: #D9D9D9;
-        font-size: 30px;
-        border-radius: 20px;
+        font-size: 23px;
+        border-radius: 50px;
         box-shadow: none;
         border: none;
         width: 356px;
-        height: 85px;
+        height: 70px;
         margin-right: -200px;
         margin-left: 8%;
+        padding-left: 30px;
+        padding-right: 30px;
         margin-top: -140px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         }
     .cat3 {
         padding-left: 340px;
-        padding-bottom: 7px;
+        margin-bottom: -34px;
         position: relative;
         z-index: 10px;
         }
@@ -74,6 +82,7 @@
         }
     html {
        background-image: {% static 'main/img/frame4.png' %};
+       overflow-y:  hidden;
     }
     </style>
 </head>
@@ -86,11 +95,18 @@
         <div class="page"><p>Отправьте сгенирированную ниже ссылку тому человеку, с которым хотите узнать совместимость</p></div>
         <div class="cat_and_button">
             <div class="cat3"><img src="{% static 'main/img/cat3.png' %}" alt="Кошка из трёшки" width=150px> </div>
-            <div><button class="code" id="Link"></button></div>
+            <div><button class="code" id="toCopy">meowmeowmeowmeowmeowmeowmeow</button></div>
         </div>
-        <div><button class="button" id="Copy_link">Скопировать ссылку</button></div>
+        <div><button class="button" id="Copy_link" onclick="Copy('toCopy')">Скопировать ссылку</button></div>
+<!--        <div id="toCopy">text to copy!</div>-->
         <div class="help_title"><span class="colortext1">П</span>одсказка от <span class="colortext2">К</span>ошки: </div>
         <div class="help">После того, как ваши напарник или напарница пройдут тест, эта страница автоматически обновится, и Вы увидите результат</div>
     </div>
+    <script type="text/javascript" src="{% static 'main/js/link.js' %}"></script>
+
+<!--<button onclick="Copy('toCopy')" title="Copy">Copy</button>-->
+<!--<div id="toCopy">text to copy!</div>-->
+
+
 </body>
 </html>
