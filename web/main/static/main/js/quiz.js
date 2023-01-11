@@ -1,13 +1,3 @@
-image = document.getElementById('image'),
-button_3 = document.getElementById('button_3');
-button_2 = document.getElementById('button_2');
-button_1 = document.getElementById('button_1');
-button0 = document.getElementById('button0');
-button1 = document.getElementById('button1');
-button2 = document.getElementById('button2');
-button3 = document.getElementById('button3');
-count = document.getElementById('Count');
-
 function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1),
         sURLVariables = sPageURL.split('&'),
@@ -24,56 +14,59 @@ function getUrlParameter(sParam) {
     return false;
 };
 
-var count_click = 0;
+
+function nextMeme() {
+    if (count_click < max) {
+        image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
+        count_click = count_click + 1;
+        count.innerText = count_click + '/' + max;
+        id_pictures = Math.floor(Math.random() * 2631 + 1);
+    }
+    else {
+        alert("meow");
+        //переход на другую страницу
+        //выход из программы
+    }
+}
+
+
+image = document.getElementById('image'),
+button_3 = document.getElementById('button_3');
+button_2 = document.getElementById('button_2');
+button_1 = document.getElementById('button_1');
+button0 = document.getElementById('button0');
+button1 = document.getElementById('button1');
+button2 = document.getElementById('button2');
+button3 = document.getElementById('button3');
+count = document.getElementById('Count');
+
+var count_click = 1;
 var max = getUrlParameter('count_click');
 alert(max);
 
-count.insertAdjacentHTML('afterbegin', count_click + '/' + max);
+count.innerText = count_click + '/' + max;
 
 button_3.onclick = function(){
-    if (count_click <= 5) {
-        image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
-        count_click = count_click + 1;
-        count.insertAdjacentHTML('afterbegin', count_click + '/' + max);
-        id_pictures = Math.floor(Math.random() * 2631 + 1);
-    }
-    else {
-        alert("meow");
-        //переход на другую страницу
-        //выход из программы
-    }
+    nextMeme();
+    // отправка через rmq
 }
 button_2.onclick = function(){
-    if (count_click <= 5) {
-        image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
-        count_click = count_click + 1;
-        count.insertAdjacentHTML('afterbegin', count_click + '/' + max);
-        id_pictures = Math.floor(Math.random() * 2631 + 1);
-    }
-    else {
-        alert("meow");
-        //переход на другую страницу
-        //выход из программы
-    }
+    nextMeme();
 }
 button_1.onclick = function(){
-id_pictures = Math.floor(Math.random() * 2631 + 1);
-image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
+    nextMeme();
 }
 button0.onclick = function(){
-id_pictures = Math.floor(Math.random() * 2631 + 1);
-image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
+    nextMeme();
 }
 button1.onclick = function(){
-id_pictures = Math.floor(Math.random() * 2631 + 1);
-image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
+    nextMeme();
 }
 button2.onclick = function(){
-id_pictures = Math.floor(Math.random() * 2631 + 1);
-image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
+    nextMeme();
 }
 button3.onclick = function(){
-id_pictures = Math.floor(Math.random() * 2631 + 1);
-image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
+    id_pictures = Math.floor(Math.random() * 2631 + 1);
+    image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
 }
 
