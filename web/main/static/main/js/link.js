@@ -9,3 +9,9 @@ function Copy(containerid) {
       document.execCommand('copy');
       document.body.removeChild(textarea);
 }
+
+link = document.getElementById('toCopy');
+var memes = localStorage.getItem('memes');
+var marks = localStorage.getItem('marks');
+
+link.innerText = marks;

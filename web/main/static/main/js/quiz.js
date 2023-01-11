@@ -14,8 +14,12 @@ function getUrlParameter(sParam) {
 };
 
 
-function nextMeme() {
+function nextMeme(number) {
     if (count_click < max) {
+        if (count_click > 0) {
+            number_memes = number_memes + '&' + id_pictures;
+            marks = marks + '&' + number;
+        }
         id_pictures = Math.floor(Math.random() * 2631 + 1);
         image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
         count_click = count_click + 1;
@@ -23,11 +27,12 @@ function nextMeme() {
     }
     else {
         document.location = "http://127.0.0.1:8000/share";
-        link.innerHTML = 'meow' + count_click;
+        localStorage.setItem('marks', marks);
+        localStorage.setItem('memes', number_memes);
     }
 }
 
-image = document.getElementById('image'),
+image = document.getElementById('image');
 button_3 = document.getElementById('button_3');
 button_2 = document.getElementById('button_2');
 button_1 = document.getElementById('button_1');
@@ -36,38 +41,20 @@ button1 = document.getElementById('button1');
 button2 = document.getElementById('button2');
 button3 = document.getElementById('button3');
 count = document.getElementById('Count');
-link = document.getElementById('Link');
-button_copy = document.getElementById('Copy_link');
 
+var id_pictures = 0;
 var count_click = 1;
 var max = getUrlParameter('count_click');
 
+var number_memes = ''
+var marks = ''
+
 count.innerText = count_click + '/' + max;
 
-button_3.onclick = function(){
-    nextMeme();
-    // отправка через rmq
-}
-button_2.onclick = function(){
-    nextMeme();
-}
-button_1.onclick = function(){
-    nextMeme();
-}
-button0.onclick = function(){
-    nextMeme();
-}
-button1.onclick = function(){
-    nextMeme();
-}
-button2.onclick = function(){
-    nextMeme();
-}
-button3.onclick = function(){
-    nextMeme();
-}
-
-button_copy.onclick = function() {
-  // скопировать ссылку
-}
-
+button_3.onclick = nextMeme(-3);
+button_2.onclick = nextMeme(-2);
+button_1.onclick = nextMeme(-1);
+button0.onclick = nextMeme(0);
+button1.onclick = nextMeme(1);
+button2.onclick = nextMeme(2);
+button3.onclick = nextMeme(3);
