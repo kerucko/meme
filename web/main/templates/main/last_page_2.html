@@ -58,29 +58,23 @@
             text-decoration: none;
         }
     </style>
-
 </head>
+
 <body>
- <div class="main">   
-    <div class="intro">
-            <p>Ну...</p>
-            <p>Ваш результат:</p>
+     <div class="main">
+        <div class="intro">
+                <p>Ну...</p>
+                <p>Ваш результат:</p>
+        </div>
+        <div class="procent"><p><b>50%</b></p></div>
+        <div class="textm"><p>В принципе, Вы общаетесь не с самым</p> <p>кринжовым человеком. Ура!</p></div>
+        <button class="button">
+            <a style="color: #FFFFFF" href={% url 'quantity' %}> Пройти тест заново </a>
+        </button>
+        <div class="textm2"><p>Спасибо, что прошли наш тест. Пока!</p></div>
+        <div class="kosh">
+        <p><img src="{% static 'main/img/кош.png' %}" alt="Кошка из трёшки" width=150></p>
+        </div>
     </div>
-    <div class="procent">
-        <p><b>50%</b></p>
-     </div>
-     <div class="textm">
-         <p>В принципе, Вы общаетесь не с самым</p> <p>кринжовым человеком. Ура!</p>
-     </div>
-    <button class="button">
-        <a style="color: #FFFFFF" href={% url 'quantity' %}> Пройти тест заново </a>
-    </button>
-    <div class="textm2">
-     <p>Спасибо, что прошли наш тест. Пока!</p>
-     </div>
-     <div class="kosh">
-     <p><img src="{% static 'main/img/кош.png' %}" alt="Кошка из трёшки" width=150></p>
-     </div>
-</div>
 </body>
 </html>

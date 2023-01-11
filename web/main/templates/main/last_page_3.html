@@ -23,8 +23,8 @@
             margin-top: -33%;
         }
         html {
-              background-image: {% static 'main/img/backg.png' %};
-              overflow-y:  hidden;
+            background-image: {% static 'main/img/backg.png' %};
+            overflow-y:  hidden;
         }
         .textm {
             font-size: 35px;
@@ -58,31 +58,25 @@
             text-decoration: none;
         }
     </style>
-
 </head>
+
 <body>
- <div class="main">   
-    <div class="intro">
-        <p>Увы...</p>
-        <p>Ваш результат:</p>
+    <div class="main">
+        <div class="intro">
+            <p>Увы...</p>
+            <p>Ваш результат:</p>
+        </div>
+        <div class="procent"><p><b>10%</b></p></div>
+        <div class="textm">
+            <p>У нашей команды нет слов.... </p>
+            <p>Cовет от Кошки: прекратите общение </p>
+            <p>с этим человеком как можно скорее, мяу (шутка) </p>
+        </div>
+        <button class="button"><a style="color: #FFFFFF" href={% url 'quantity' %}> Пройти тест заново </a></button>
+        <div class="textm2"><p>Спасибо, что прошли наш тест. Пока!</p></div>
+        <div class="kosh">
+        <p><img src="{% static 'main/img/кош.png' %}" alt="Кошка из трёшки" width=150></p>
+        </div>
     </div>
-    <div class="procent">
-        <p><b>10%</b></p>
-     </div>
-     <div class="textm">
-         <p>У нашей команды нет слов.... </p>
-         <p>Cовет от Кошки: прекратите общение </p> 
-         <p>с этим человеком как можно скорее, мяу (шутка) </p>
-     </div>
-    <button class="button">
-        <a style="color: #FFFFFF" href={% url 'quantity' %}> Пройти тест заново </a>
-    </button>
-    <div class="textm2">
-     <p>Спасибо, что прошли наш тест. Пока!</p>
-     </div>
-     <div class="kosh">
-     <p><img src="{% static 'main/img/кош.png' %}" alt="Кошка из трёшки" width=150></p>
-     </div>
-</div>
 </body>
 </html>
