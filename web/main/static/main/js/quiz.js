@@ -16,23 +16,19 @@ function getUrlParameter(sParam) {
 
 function nextMeme() {
     if (count_click < max) {
-//        if (count_click > 0) {
-//            number_memes = number_memes + '&' + id_pictures;
-//            marks = marks + '&' + number;
-//        }
         id_pictures = Math.floor(Math.random() * 2631 + 1);
         image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
         count_click = count_click + 1;
         count.innerText = count_click + '/' + max;
     }
     else {
+        localStorage.setItem('memes', id_memes);
+        localStorage.setItem('marks', marks);
         document.location = "http://127.0.0.1:8000/share";
-//        localStorage.setItem('marks', marks);
-//        localStorage.setItem('memes', number_memes);
     }
 }
 
-image = document.getElementById('image');
+image = document.getElementById('image'),
 button_3 = document.getElementById('button_3');
 button_2 = document.getElementById('button_2');
 button_1 = document.getElementById('button_1');
@@ -46,15 +42,43 @@ var id_pictures = 0;
 var count_click = 1;
 var max = getUrlParameter('count_click');
 
-var number_memes = ''
-var marks = ''
+var marks = '';
+var id_memes = '';
 
 count.innerText = count_click + '/' + max;
 
-button_3.onclick = nextMeme();
-button_2.onclick = nextMeme();
-button_1.onclick = nextMeme();
-button0.onclick = nextMeme();
-button1.onclick = nextMeme();
-button2.onclick = nextMeme();
-button3.onclick = nextMeme();
+button_3.onclick = function(){
+    id_memes = id_memes + '_' + id_pictures;
+    marks = marks + '_-3';
+    nextMeme();
+}
+button_2.onclick = function(){
+    id_memes = id_memes + '_' + id_pictures;
+    marks = marks + '_-2';
+    nextMeme();
+}
+button_1.onclick = function(){
+    id_memes = id_memes + '_' + id_pictures;
+    marks = marks + '_-1';
+    nextMeme();
+}
+button0.onclick = function(){
+    id_memes = id_memes + '_' + id_pictures;
+    marks = marks + '_0';
+    nextMeme();
+}
+button1.onclick = function(){
+    id_memes = id_memes + '_' + id_pictures;
+    marks = marks + '_1';
+    nextMeme();
+}
+button2.onclick = function(){
+    id_memes = id_memes + '_' + id_pictures;
+    marks = marks + '_2';
+    nextMeme();
+}
+button3.onclick = function(){
+    id_memes = id_memes + '_' + id_pictures;
+    marks = marks + '_3';
+    nextMeme();
+}
