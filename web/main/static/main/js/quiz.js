@@ -14,12 +14,12 @@ function getUrlParameter(sParam) {
 };
 
 
-function nextMeme(number) {
+function nextMeme() {
     if (count_click < max) {
-        if (count_click > 0) {
-            number_memes = number_memes + '&' + id_pictures;
-            marks = marks + '&' + number;
-        }
+//        if (count_click > 0) {
+//            number_memes = number_memes + '&' + id_pictures;
+//            marks = marks + '&' + number;
+//        }
         id_pictures = Math.floor(Math.random() * 2631 + 1);
         image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
         count_click = count_click + 1;
@@ -27,8 +27,8 @@ function nextMeme(number) {
     }
     else {
         document.location = "http://127.0.0.1:8000/share";
-        localStorage.setItem('marks', marks);
-        localStorage.setItem('memes', number_memes);
+//        localStorage.setItem('marks', marks);
+//        localStorage.setItem('memes', number_memes);
     }
 }
 
@@ -51,10 +51,10 @@ var marks = ''
 
 count.innerText = count_click + '/' + max;
 
-button_3.onclick = nextMeme(-3);
-button_2.onclick = nextMeme(-2);
-button_1.onclick = nextMeme(-1);
-button0.onclick = nextMeme(0);
-button1.onclick = nextMeme(1);
-button2.onclick = nextMeme(2);
-button3.onclick = nextMeme(3);
+button_3.onclick = nextMeme();
+button_2.onclick = nextMeme();
+button_1.onclick = nextMeme();
+button0.onclick = nextMeme();
+button1.onclick = nextMeme();
+button2.onclick = nextMeme();
+button3.onclick = nextMeme();
