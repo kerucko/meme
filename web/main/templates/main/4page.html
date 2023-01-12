@@ -95,7 +95,7 @@
         <div class="page"><p>Отправьте сгенирированную ниже ссылку тому человеку, с которым хотите узнать совместимость</p></div>
         <div class="cat_and_button">
             <div class="cat3"><img src="{% static 'main/img/cat3.png' %}" alt="Кошка из трёшки" width=150px> </div>
-            <div><button class="code" id="toCopy">meowmeowmeowmeowmeowmeowmeow</button></div>
+            <div><button class="code" id="toCopy">{{ result }}</button></div>
         </div>
         <div><button class="button" id="Copy_link" onclick="Copy('toCopy')">Скопировать ссылку</button></div>
 <!--        <div id="toCopy">text to copy!</div>-->
