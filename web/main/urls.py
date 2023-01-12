@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('memematch', views.FirstPage, name="memematch"),
+    path('', views.FirstPage, name=""),
     path('quantity', views.Quantity, name="quantity"),
     path('point', views.Point, name='point'),
     path('share', views.Share, name='share'),

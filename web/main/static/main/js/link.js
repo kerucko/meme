@@ -13,5 +13,7 @@ function Copy(containerid) {
 link = document.getElementById('toCopy');
 var memes = localStorage.getItem('memes');
 var marks = localStorage.getItem('marks');
+localStorage.removeItem('memes');
+localStorage.removeItem('marks');
 
 link.innerText = marks;
