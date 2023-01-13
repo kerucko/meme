@@ -80,6 +80,7 @@
         width: 35%;
         }
     .form {
+        bottom:30px;
         padding-top: 100%;
     }
     html {
@@ -101,13 +102,12 @@
         </div>
         <div class="help_title"><span class="colortext1">П</span>одсказка от <span class="colortext2">К</span>ошки: </div>
         <div class="help">После того, как ваш напарник или напарница пройдут тест, результаты отобразятся у него</div>
-        <div><button class="button" id="Copy_link" onclick="Copy('toCopy')">Скопировать ссылку</button></div>
-    </div>
-    <form method="post">
+        <form method="post">
+        <button class="button" id="Copy_link" onclick="Copy('toCopy')" type="submit">Скопировать ссылку</button>
         {% csrf_token %}
         {{ form }}
-        <button id="Test" name="Test" type="submit">test</button>
     </form>
+    </div>
     <script type="text/javascript" src="{% static 'main/js/link.js' %}"></script>
 </body>
 </html>

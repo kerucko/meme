@@ -66,14 +66,14 @@
 </head>
 <body>
  <div class="main">   
-    <div class="intro">
+    <div class="intro" id="Title">
             <p>Поздравляем!</p>
             <p>Ваш результат:</p>
     </div>
     <div class="procent">
         <p id="Result"><b>90%</b></p>
      </div>
-     <div class="textm">
+     <div class="textm" id="Text">
          <p>It's a match!</p> <p>Вы идеально подходите друг другу &ltЗ </p>
      </div>
 <!--     <div class="textm2">-->
@@ -85,7 +85,7 @@
      </div>
          <div>
     <button class="button">
-        <a style="color: #FFFFFF" href={% url 'quantity' %}> Пройти тест заново </a>
+        <a style="color: #FFFFFF" onclick="document.location='main/2page.html'"> Пройти тест заново </a>
     </button>
          </div>
 </div>
