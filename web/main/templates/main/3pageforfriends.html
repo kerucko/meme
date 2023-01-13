@@ -42,7 +42,7 @@
         }
         html {
             background-image: {% static 'main/img/frame2.png' %};
-            overflow-y:  hidden;
+<!--            overflow-y:  hidden;-->
         }
     </style>
 </head>
@@ -64,7 +64,10 @@
                 <input class="button" type="button" value="3" id="button3"/>
             </div>
         </div>
-        <script type="text/javascript" src="{% static 'main/js/quiz.js' %}"></script>
     </div>
+    <div id="Count_click">{{ length }}</div>
+    <div id="Memes">{{ memes }}</div>
+    <div id="Marks">{{ marks }}</div>
+    <script type="text/javascript" src="{% static 'main/js/quiz2.js' %}"></script>
 </body>
 </html>

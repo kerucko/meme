@@ -28,6 +28,8 @@ id_text = document.getElementById('ID');
 
 var memes = localStorage.getItem('memes');
 var marks = localStorage.getItem('marks');
+//var max = localStorage.getItem('max');
+//alert(max);
 localStorage.removeItem('memes');
 localStorage.removeItem('marks');
 
@@ -37,3 +39,4 @@ memes_text.value = memes;
 var generated_id = makeid(10);
 id_text.value = generated_id;
 
+link.innerText = 'http://127.0.0.1:8000/other?mode=' + generated_id;

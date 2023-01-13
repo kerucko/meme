@@ -24,16 +24,10 @@ def Share(request):
             print('ERROR')
 
     form = MarksForm()
-
     data = {
         'form': form
     }
 
-    results = Marks.objects.all()
-    result = results[1].unique_id
-    if request.POST.get('delete'):
-        request.session.clear()
-        results = 'a'
     return render(request, 'main/4page.html', data)
 
 
@@ -49,4 +43,23 @@ def LastBad(request):
     return render(request, 'main/last_page_3.html')
 
 def Other(request):
-    return render(request, 'main/3page.html')
+    mode = request.GET.get('mode')
+    memes = ''
+    marks = ''
+
+    results = Marks.objects.all()
+    for element in results:
+        if element.unique_id == mode:
+            memes = element.memes
+            marks = element.marks
+    memes = memes[1:]
+    marks = marks[1:]
+    length = len(memes.split('_'))
+
+    data = {
+        'length': length,
+        'memes': memes,
+        'marks': marks
+    }
+
+    return render(request, 'main/3pageforfriends.html', data)
