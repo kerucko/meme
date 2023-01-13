@@ -79,13 +79,22 @@
         margin-bottom: -100px;
         width: 35%;
         }
-    .form {
-        bottom:30px;
-        padding-top: 100%;
+    .my_form {
+        margin-top: 10%;
+        margin-left: 1000px;
+        margin-right: 1000px;
+        padding-left: 200px;
+        display: none;
+    }
+    .pypy {
+        margin-right: 200%;
+        margin-top: 50px;
+        -webkit-text-fill-color: transparent;
     }
     html {
        background-image: {% static 'main/img/frame4.png' %};
-<!--        overflow-y:  hidden;-->
+       overflow-x:  hidden;
+       overflow-y:  hidden;
     }
     </style>
 </head>
@@ -103,10 +112,14 @@
         <div class="help_title"><span class="colortext1">П</span>одсказка от <span class="colortext2">К</span>ошки: </div>
         <div class="help">После того, как ваш напарник или напарница пройдут тест, результаты отобразятся у него</div>
         <form method="post">
-        <button class="button" id="Copy_link" onclick="Copy('toCopy')" type="submit">Скопировать ссылку</button>
-        {% csrf_token %}
-        {{ form }}
-    </form>
+            <button class="button" id="Copy_link" onclick="Copy('toCopy')" type="submit">Скопировать ссылку</button>
+            <p><p><text class="pypy">fghjklkjhgfghjkl</text>
+            <text class="pypy">fghjklkjhgfghjkl</text>
+</p></p>
+            {% csrf_token %}
+            {{ form }}
+
+        </form>
     </div>
     <script type="text/javascript" src="{% static 'main/js/link.js' %}"></script>
 </body>

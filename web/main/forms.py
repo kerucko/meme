@@ -7,16 +7,16 @@ class MarksForm(ModelForm):
         fields = ['marks', 'memes', 'unique_id']
         widgets = {
             'marks': TextInput(attrs={
-                'placeholder': 'marks',
-                'id': 'Marks'
+                'id': 'Marks',
+                'class': 'my_form'
             }),
             'memes': TextInput(attrs={
-                'placeholder': 'memes',
-                'id': 'Memes'
+                'id': 'Memes',
+                'class': 'my_form'
             }),
             'unique_id': TextInput(attrs={
-                'placeholder': 'ID',
-                'id': 'ID'
+                'id': 'ID',
+                'class': 'my_form'
             })
 
         }
