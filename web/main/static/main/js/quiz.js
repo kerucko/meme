@@ -39,7 +39,8 @@ button2 = document.getElementById('button2');
 button3 = document.getElementById('button3');
 count = document.getElementById('Count');
 
-var id_pictures = 0;
+var id_pictures = Math.floor(Math.random() * 2631 + 1);
+image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
 var count_click = 1;
 var max = getUrlParameter('count_click');
 
