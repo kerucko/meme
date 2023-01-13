@@ -9,5 +9,6 @@ urlpatterns = [
     path('awesome', views.LastAwesome, name='awesome'),
     path('good', views.LastGood, name='good'),
     path('bad', views.LastBad, name='bad'),
+    path('other', views.Other, name='other'),
 
 ]

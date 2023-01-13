@@ -47,3 +47,6 @@ def LastGood(request):
 
 def LastBad(request):
     return render(request, 'main/last_page_3.html')
+
+def Other(request):
+    return render(request, 'main/3page.html')
