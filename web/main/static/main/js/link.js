@@ -21,11 +21,19 @@ function makeid(length) {
 }
 
 
-alert(makeid(10));
 link = document.getElementById('toCopy');
+marks_text = document.getElementById('Marks');
+memes_text = document.getElementById('Memes');
+id_text = document.getElementById('ID');
+
 var memes = localStorage.getItem('memes');
 var marks = localStorage.getItem('marks');
-//localStorage.removeItem('memes');
-//localStorage.removeItem('marks');
-//
-//link.innerText = marks;
+localStorage.removeItem('memes');
+localStorage.removeItem('marks');
+
+
+marks_text.value = marks;
+memes_text.value = memes;
+var generated_id = makeid(10);
+id_text.value = generated_id;
+

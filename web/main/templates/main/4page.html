@@ -88,6 +88,16 @@
 </head>
 
 <body>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+<!--        <input type="text", placeholder="marks" id="Marks"><br>-->
+<!--        <input type="text", placeholder="memes" id="Memes"><br>-->
+<!--        <input type="text", placeholder="id" id="ID"><br>-->
+        <button id="Test" name="Test" type="submit">test</button>
+    </form>
+
     <div class="main">
         <div class="intro">
             <p><center>Тест пройден, статистика собрана!</center></p>

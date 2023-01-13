@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Marks
+from .forms import MarksForm
 
 
 def FirstPage(request):
@@ -15,10 +16,25 @@ def Point(request):
 
 
 def Share(request):
+    if request.method == 'POST':
+        form = MarksForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print('ERROR')
+
+    form = MarksForm()
+
+    data = {
+        'form': form
+    }
+
     results = Marks.objects.all()
-    result = results[0].unique_id
-    print(result)
-    return render(request, 'main/4page.html', {"result": result})
+    result = results[1].unique_id
+    if request.POST.get('delete'):
+        request.session.clear()
+        results = 'a'
+    return render(request, 'main/4page.html', data)
 
 
 def LastAwesome(request):
