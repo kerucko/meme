@@ -6,12 +6,10 @@
     <title>Memematch</title>
     <link rel="shortcut icon" href="{% static 'main/img/m.png' %}" type="image/png">
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-    html { overflow-y:  hidden; }
     .intro {
         width: 100%;
         margin-top: 5%;
@@ -26,13 +24,13 @@
         border-radius: 100px;
         font-size: 20px;
         margin-right: -200px;
-        margin-left: 10%;
-        margin-top: 2%;
+        margin-left: 10.5%;
+        margin-top: 8%;
         }
     .page {
         font-family: 'Montserrat', sans-serif;
         font-size: 28px;
-        font-weight: 500;
+        font-weight: 450;
         margin-left: 8%;
         width: 58%;
         }
@@ -49,9 +47,9 @@
         height: 70px;
         margin-right: -200px;
         margin-left: 8%;
+        margin-top: -0.9%;
         padding-left: 30px;
         padding-right: 30px;
-        margin-top: -140px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -78,23 +76,20 @@
         }
     .help {
         margin-left: 850px;
+        margin-bottom: -100px;
         width: 35%;
         }
+    .form {
+        padding-top: 100%;
+    }
     html {
        background-image: {% static 'main/img/frame4.png' %};
-       overflow-y:  hidden;
+<!--        overflow-y:  hidden;-->
     }
     </style>
 </head>
 
 <body>
-
-    <form method="post">
-        {% csrf_token %}
-        {{ form }}
-        <button id="Test" name="Test" type="submit">test</button>
-    </form>
-
     <div class="main">
         <div class="intro">
             <p><center>Тест пройден, статистика собрана!</center></p>
@@ -104,16 +99,15 @@
             <div class="cat3"><img src="{% static 'main/img/cat3.png' %}" alt="Кошка из трёшки" width=150px> </div>
             <div><button class="code" id="toCopy">{{ result }}</button></div>
         </div>
-        <div><button class="button" id="Copy_link" onclick="Copy('toCopy')">Скопировать ссылку</button></div>
-<!--        <div id="toCopy">text to copy!</div>-->
         <div class="help_title"><span class="colortext1">П</span>одсказка от <span class="colortext2">К</span>ошки: </div>
-        <div class="help">После того, как ваши напарник или напарница пройдут тест, эта страница автоматически обновится, и Вы увидите результат</div>
+        <div class="help">После того, как ваш напарник или напарница пройдут тест, результаты отобразятся у него</div>
+        <div><button class="button" id="Copy_link" onclick="Copy('toCopy')">Скопировать ссылку</button></div>
     </div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button id="Test" name="Test" type="submit">test</button>
+    </form>
     <script type="text/javascript" src="{% static 'main/js/link.js' %}"></script>
-
-<!--<button onclick="Copy('toCopy')" title="Copy">Copy</button>-->
-<!--<div id="toCopy">text to copy!</div>-->
-
-
 </body>
 </html>

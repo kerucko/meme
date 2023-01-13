@@ -6,7 +6,6 @@
     <title>Memematch</title>
     <link rel="shortcut icon" href="{% static 'main/img/m.png' %}" type="image/png">
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css">
-    <link rel="stylesheet" href="css/style.css" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,9 +15,6 @@
     <meta name="HandheldFriendly" content="true"/>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <style>
-        html {
-            background-image: {% static 'main/img/frame3.png' %}
-            }
         .button {
             width: 81px;
             height: 81px;
@@ -43,6 +39,10 @@
             margin-right: 5%;
             text-align: right;
             font-size: 35px;
+        }
+        html {
+            background-image: {% static 'main/img/frame2.png' %};
+            overflow-y:  hidden;
         }
     </style>
 </head>
