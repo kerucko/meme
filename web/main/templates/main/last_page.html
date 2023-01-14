@@ -65,31 +65,28 @@
 
 </head>
 <body>
- <div class="main">   
-    <div class="intro" id="Title">
+    <div class="main">
+        <div class="intro" id="Title">
             <p>Поздравляем!</p>
             <p>Ваш результат:</p>
-    </div>
+        </div>
     <div class="procent">
         <p id="Result"><b>90%</b></p>
-     </div>
-     <div class="textm" id="Text">
-         <p>It's a match!</p> <p>Вы идеально подходите друг другу &ltЗ </p>
-     </div>
-<!--     <div class="textm2">-->
-<!--        <p>Спасибо, что прошли наш тест. Пока!</p>-->
-<!--     </div>-->
-     <div class="cat_and_button">
-     <div class="cat1">
-        <p><img src="{% static 'main/img/meowmeow.png' %}" alt="Кошка из трёшки" width=200></p>
-     </div>
-         <div>
-    <button class="button">
-        <a style="color: #FFFFFF" onclick="document.location='main/2page.html'"> Пройти тест заново </a>
-    </button>
-         </div>
-</div>
-</div>
-<script type="text/javascript" src="{% static 'main/js/result1.js' %}"></script>
+    </div>
+    <div class="textm" id="Text">
+        <p>It's a match!</p> <p>Вы идеально подходите друг другу &ltЗ </p>
+    </div>
+    <div class="cat_and_button">
+        <div class="cat1">
+            <p><img src="{% static 'main/img/meowmeow.png' %}" alt="Кошка из трёшки" width=200></p>
+        </div>
+        <div>
+            <button class="button">
+                <a style="color: #FFFFFF" href={% url 'quantity' %}>Пройти тест заново</a>
+            </button>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="{% static 'main/js/result1.js' %}"></script>
 </body>
 </html>

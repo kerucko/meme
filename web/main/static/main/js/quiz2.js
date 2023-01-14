@@ -62,7 +62,8 @@ max = document.getElementById('Count_click').innerText;
 memes1 = first_user_memes.split('_');
 marks1 = first_user_marks.split('_');
 
-var id_pictures = 0;
+var id_pictures = memes1[0];
+image.src="static/main/img//photos/photo_" + id_pictures + ".jpg";
 var count_click = 1;
 
 var marks = '';

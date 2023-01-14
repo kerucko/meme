@@ -86,7 +86,7 @@
         padding-left: 200px;
         display: none;
     }
-    .pypy {
+    .kostyl {
         margin-right: 200%;
         margin-top: 50px;
         -webkit-text-fill-color: transparent;
@@ -113,12 +113,10 @@
         <div class="help">После того, как ваш напарник или напарница пройдут тест, результаты отобразятся у него</div>
         <form method="post">
             <button class="button" id="Copy_link" onclick="Copy('toCopy')" type="submit">Скопировать ссылку</button>
-            <p><p><text class="pypy">fghjklkjhgfghjkl</text>
-            <text class="pypy">fghjklkjhgfghjkl</text>
-</p></p>
+            <p><text class="kostyl">meow</text>
+            <text class="kostyl">meow</text></p>
             {% csrf_token %}
             {{ form }}
-
         </form>
     </div>
     <script type="text/javascript" src="{% static 'main/js/link.js' %}"></script>
